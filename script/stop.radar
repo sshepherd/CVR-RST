@@ -1,0 +1,15 @@
+#!/bin/bash
+
+killall -INT schedule
+sleep 10
+killall schedule
+killall rtserver
+killall fitacfwrite
+killall rawacfwrite
+killall iqwrite
+
+killall shellserver
+killall errlog
+
+killall radar
+

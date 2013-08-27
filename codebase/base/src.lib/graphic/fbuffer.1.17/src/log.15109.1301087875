@@ -1,0 +1,8 @@
+make.version /home/radar2/rst-new-20110324/codebase/base/src.lib/graphic/fbuffer.1.17/src/..
+make.hdr /home/radar2/rst-new-20110324/codebase/base/src.lib/graphic/fbuffer.1.17/src/../include /home/radar2/rst-new-20110324/include/base 
+/home/radar2/rst-new-20110324/codebase/base/src.lib/graphic/fbuffer.1.17/src/../include/rfbuffer.h
+`/home/radar2/rst-new-20110324/codebase/base/src.lib/graphic/fbuffer.1.17/src/../include/rfbuffer.h' -> `/home/radar2/rst-new-20110324/include/base/rfbuffer.h'
+cc -fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX -I/home/radar2/rst-new-20110324/include/base -m32 -c png.c    
+cc -fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX -I/home/radar2/rst-new-20110324/include/base -m32 -c bezier.c    
+cc -fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX -I/home/radar2/rst-new-20110324/include/base -m32 -c char.c    
+make: *** [char.o] Interrupt
