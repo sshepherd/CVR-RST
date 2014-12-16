@@ -6,9 +6,10 @@
 
 # Linux (GCC)
 #
+CC=gcc			# SGS
 
 CFLAGS = -fPIC -Wall -O3 -ansi \
-         -D_GNU_SOURCE -D_LINUX $(INCLUDE)
+         -D_GNU_SOURCE -D_LINUX $(INCLUDE) -fno-stack-protector
 
 LFLAGS = -shared -lm -lz 
 
@@ -18,7 +19,7 @@ endif
 
 ifeq ($(ARCH),i686)
     CFLAGS += -m32
-    LFLAGS += -m elf_i386
+#    LFLAGS += -m elf_i386		# SGS
 endif
 
 

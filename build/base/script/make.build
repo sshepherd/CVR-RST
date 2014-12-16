@@ -52,18 +52,19 @@ makebuild() {
   return 0
 }
 
-liblist="xml/xml xml/xmldb xml/tagdb xml/xmldoclib \
-         task/option httpd/rscript"
-binlist="xmldoc/xmldoc xmldoc/xmldoc xmldoc/scdoc \
-         build/addtext build/maketree build/makeall"
+#liblist="xml/xml xml/xmldb xml/tagdb xml/xmldoclib \
+#         task/option httpd/rscript"
+#binlist="xmldoc/xmldoc xmldoc/xmldoc xmldoc/scdoc \
+#         build/addtext build/maketree build/makeall"
+binlist="build/makeall"
 
 rm -f ${LIBPATH}/*
 rm -f ${BINPATH}/*
 
-for libname in ${liblist}
-do
-  makebuild ${libname} lib
-done
+#for libname in ${liblist}
+#do
+#  makebuild ${libname} lib
+#done
 for binname in ${binlist}
 do
   makebuild ${binname} bin

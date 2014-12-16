@@ -6,8 +6,9 @@
 
 # Linux (GCC)
 #
+CC=gcc			# SGS
 
-CFLAGS=-fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX 
+CFLAGS=-fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX -fno-stack-protector
 
 ifdef XPATH
   ifdef XLIB
@@ -34,14 +35,12 @@ endif
 
 ifeq ($(ARCH),i686)
     CFLAGS += -m32
-    LFLAGS += -m elf_i386
+#    LFLAGS += -m elf_i386		# SGS
 endif
 
 # Library identifier letters
 
 # By default statically link the all programs
-
-
 
 .c.o:
 	$(CC) $(CFLAGS) -c $<    
@@ -64,22 +63,4 @@ version:
 clean:
 	rm -f *.o
 	rm -f $(OUTPUT)
-
- 
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
