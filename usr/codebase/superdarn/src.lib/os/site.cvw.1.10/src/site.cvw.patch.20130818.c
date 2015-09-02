@@ -592,7 +592,7 @@ int SiteCvwIntegrate(int (*lags)[2]) {
       nsamp=(int)dprm.samples;
 
    /* invert interf phase here if necessary */
-/*      if(invert!=0) {
+/*      if(invert!=0) {*/
         for(n=0;n<(nsamp);n++){
           Q=((rdata.main)[n] & 0xffff0000) >> 16;
           I=(rdata.main)[n] & 0x0000ffff;
@@ -602,8 +602,7 @@ int SiteCvwIntegrate(int (*lags)[2]) {
           uI32=((uint32) I) & 0xFFFF;
           (rdata.main)[n]=uQ32|uI32;
         }
-      }
-*/
+/*      }*/
 
     /* decode phase coding here */
       if(nbaud>1){
