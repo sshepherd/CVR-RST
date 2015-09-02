@@ -2,14 +2,14 @@
 
 killall -INT schedule
 sleep 10
-killall schedule
-killall rtserver
-killall fitacfwrite
+killall -9 schedule
+killall -9 rtserver
+killall -9 fitacfwrite
 killall rawacfwrite
-killall iqwrite
+killall -9 iqwrite
 
-killall shellserver
-killall errlog
+killall -9 shellserver
+killall -9 errlog
 
-killall radar
+killall -9 radar
 
